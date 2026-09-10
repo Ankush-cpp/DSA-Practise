@@ -6,10 +6,11 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 
 ## Problems Solved
 
-| LeetCode | Problem | Pattern |
-|:--------:|---------|---------|
-| 100 | Same Tree | Tree Recursion + Structural Comparison |
-| 572 | Subtree of Another Tree | Tree Recursion + Same Tree |
+| LeetCode | Problem                 | Pattern
+|:--------:|:-----------------------:|:---------------------------------------:|
+| 100      | Same Tree               | Tree Recursion + Structural Comparison  |
+| 572      | Subtree of Another Tree | Tree Recursion + Same Tree              |
+| 543      | Diameter of Binary Tree | Tree Height + Postorder DFS             |
 
 ---
 
@@ -35,14 +36,24 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 - Reuse the same-tree comparison concept from LC 100.
 - Combine tree traversal with recursive structural comparison.
 
+## 3. Tree Height + Postorder DFS
+- LC 543 – Diameter of Binary Tree
+
+**Learning**
+- Calculate the height of the left and right subtrees.
+- The diameter passing through a node is `leftHeight + rightHeight`.
+- Use postorder traversal to calculate subtree heights.
+- Maintain the maximum diameter while calculating heights.
+
 ---
 
 # Complexity Summary
 
 | Problem | Time Complexity | Space Complexity |
 |---------|-----------------|------------------|
-| LC 100 | O(n) | O(h) |
-| LC 572 | O(n × m) | O(h) |
+| LC 100  | O(n)            | O(h)             |
+| LC 572  | O(n × m)        | O(h)             |
+| LC 543  | O(n)            | O(h)             |
 
 Where:
 - `n` = number of nodes in the main tree
