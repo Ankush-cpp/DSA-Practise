@@ -45,6 +45,15 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 - Use postorder traversal to calculate subtree heights.
 - Maintain the maximum diameter while calculating heights.
 
+## 4. Mirror Recursion
+- LC 101 – Symmetric Tree
+
+**Learning**
+- Compare the left and right subtrees as mirror images.
+- Compare opposite children recursively.
+- Left subtree's left child is compared with right subtree's right child.
+- Left subtree's right child is compared with right subtree's left child.
+
 ---
 
 # Complexity Summary
@@ -54,6 +63,7 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | LC 100  | O(n)            | O(h)             |
 | LC 572  | O(n × m)        | O(h)             |
 | LC 543  | O(n)            | O(h)             |
+| LC 101  | O(n)            | o(h)             |
 
 Where:
 - `n` = number of nodes in the main tree
