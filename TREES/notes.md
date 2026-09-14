@@ -6,11 +6,13 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 
 ## Problems Solved
 
-| LeetCode | Problem                 | Pattern
-|:--------:|:-----------------------:|:---------------------------------------:|
-| 100      | Same Tree               | Tree Recursion + Structural Comparison  |
-| 572      | Subtree of Another Tree | Tree Recursion + Same Tree              |
-| 543      | Diameter of Binary Tree | Tree Height + Postorder DFS             |
+| LeetCode | Problem                           | Pattern
+|:--------:|:---------------------------------:|:---------------------------------------:|
+| 100      | Same Tree                         | Tree Recursion + Structural Comparison  |
+| 572      | Subtree of Another Tree           | Tree Recursion + Same Tree              |
+| 543      | Diameter of Binary Tree           | Tree Height + Postorder DFS             |
+| 102      | Binary Tree Level Order Traversal | BFS + Queue                             |
+| 104      | Maximum Depth of Binary Tree      | DFS + Recursion                         |
 
 ---
 
@@ -54,6 +56,24 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 - Left subtree's left child is compared with right subtree's right child.
 - Left subtree's right child is compared with right subtree's left child.
 
+## 5. BFS + Queue
+- LC 102 – Binary Tree Level Order Traversal
+
+**Learning**
+- Use a queue to traverse the tree level by level.
+- Process all nodes belonging to the current level together.
+- Add the children of each node to the queue for the next level.
+
+---
+
+## 6. DFS + Recursion
+- LC 104 – Maximum Depth of Binary Tree
+
+**Learning**
+- Recursively calculate the depth of left and right subtrees.
+- The depth of a node is one plus the maximum depth of its children.
+- Base case: a `NULL` node has depth 0.
+
 ---
 
 # Complexity Summary
@@ -64,6 +84,8 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | LC 572  | O(n × m)        | O(h)             |
 | LC 543  | O(n)            | O(h)             |
 | LC 101  | O(n)            | o(h)             |
+| LC 102  | O(n)            | O(n)             |
+| LC 104  | O(n)            | O(h)             |
 
 Where:
 - `n` = number of nodes in the main tree
