@@ -13,6 +13,9 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | 543      | Diameter of Binary Tree           | Tree Height + Postorder DFS             |
 | 102      | Binary Tree Level Order Traversal | BFS + Queue                             |
 | 104      | Maximum Depth of Binary Tree      | DFS + Recursion                         |
+| 94       | Binary Tree Inorder Traversal     | DFS + Recursion                         |
+| 144      | Binary Tree Preorder Traversal    | DFS + Recursion                         |
+
 
 ---
 
@@ -74,6 +77,26 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 - The depth of a node is one plus the maximum depth of its children.
 - Base case: a `NULL` node has depth 0.
 
+## 7. Inorder DFS
+- LC 94 – Binary Tree Inorder Traversal
+
+**Learning**
+- Traverse the left subtree first.
+- Process the current node.
+- Traverse the right subtree.
+- Follow the `Left → Root → Right` order.
+
+---
+
+## 8. Preorder DFS
+- LC 144 – Binary Tree Preorder Traversal
+
+**Learning**
+- Process the current node first.
+- Traverse the left subtree.
+- Traverse the right subtree.
+- Follow the `Root → Left → Right` order.
+
 ---
 
 # Complexity Summary
@@ -86,6 +109,9 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | LC 101  | O(n)            | o(h)             |
 | LC 102  | O(n)            | O(n)             |
 | LC 104  | O(n)            | O(h)             |
+| LC 94   | O(n)            | O(h)             |
+| LC 144  | O(n)            | O(h)             |
+
 
 Where:
 - `n` = number of nodes in the main tree
