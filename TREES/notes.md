@@ -15,7 +15,7 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | 104      | Maximum Depth of Binary Tree      | DFS + Recursion                         |
 | 94       | Binary Tree Inorder Traversal     | DFS + Recursion                         |
 | 144      | Binary Tree Preorder Traversal    | DFS + Recursion                         |
-
+| 112      | Path Sum                          | DFS + Recursion                         |
 
 ---
 
@@ -97,6 +97,15 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 - Traverse the right subtree.
 - Follow the `Root → Left → Right` order.
 
+## 9. DFS + Path Sum
+- LC 112 – Path Sum
+
+**Learning**
+- Traverse the tree recursively.
+- Subtract the current node's value from the target sum.
+- A valid path must end at a leaf node.
+- Return true if either the left or right subtree contains a valid path.
+
 ---
 
 # Complexity Summary
@@ -111,7 +120,7 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | LC 104  | O(n)            | O(h)             |
 | LC 94   | O(n)            | O(h)             |
 | LC 144  | O(n)            | O(h)             |
-
+| LC 112  | O(n)            | O(h)             |
 
 Where:
 - `n` = number of nodes in the main tree
