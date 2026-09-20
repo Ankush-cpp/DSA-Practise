@@ -16,6 +16,10 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | 94       | Binary Tree Inorder Traversal     | DFS + Recursion                         |
 | 144      | Binary Tree Preorder Traversal    | DFS + Recursion                         |
 | 112      | Path Sum                          | DFS + Recursion                         |
+| 105      | Construct Binary Tree from........| Recursion + Hash Map                    |
+|..........| preorder and Inorder Traversal....|                                         |
+| 236      | Lowest Common Ancestor of a Binary| DFS + Recursion                         |
+|..........| tree..............................|.........................................|
 
 ---
 
@@ -121,6 +125,8 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | LC 94   | O(n)            | O(h)             |
 | LC 144  | O(n)            | O(h)             |
 | LC 112  | O(n)            | O(h)             |
+| LC 105  | O(n)            | O(n)             |
+| LC 236  | O(n)            | O(h)             |
 
 Where:
 - `n` = number of nodes in the main tree
