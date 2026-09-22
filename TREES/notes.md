@@ -20,6 +20,8 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 |..........| preorder and Inorder Traversal....|                                         |
 | 236      | Lowest Common Ancestor of a Binary| DFS + Recursion                         |
 |..........| tree..............................|.........................................|
+| LC 257   | Binary Tree Paths                 | DFS + Backtracking                      |
+| 662      | Maximum Width of Binary Tree      | BFS + Level Indexing                    |
 
 ---
 
@@ -110,6 +112,24 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 - A valid path must end at a leaf node.
 - Return true if either the left or right subtree contains a valid path.
 
+## 10. DFS + Path Tracking
+- LC 257 – Binary Tree Paths
+
+**Learning**
+- Traverse the tree recursively while maintaining the current path.
+- Add the path to the result when a leaf node is reached.
+- Explore both left and right subtrees.
+- Build the path dynamically using recursion.
+
+## 11. BFS + Level Indexing
+- LC 662 – Maximum Width of Binary Tree
+
+**Learning**
+- Use level-order traversal with a queue.
+- Assign an index to each node as if the tree were a complete binary tree.
+- For each level, calculate width using the first and last node indices.
+- Use normalized level indices to avoid unnecessary growth of values.
+
 ---
 
 # Complexity Summary
@@ -127,6 +147,8 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | LC 112  | O(n)            | O(h)             |
 | LC 105  | O(n)            | O(n)             |
 | LC 236  | O(n)            | O(h)             |
+| LC 257  | O(n²)           | O(h)             |
+| LC 662  | O(n)            | O(n)             |
 
 Where:
 - `n` = number of nodes in the main tree
