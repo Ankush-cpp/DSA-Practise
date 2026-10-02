@@ -21,7 +21,10 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | 236      | Lowest Common Ancestor of a Binary| DFS + Recursion                         |
 |..........| tree..............................|.........................................|
 | LC 257   | Binary Tree Paths                 | DFS + Backtracking                      |
-| 662      | Maximum Width of Binary Tree      | BFS + Level Indexing                    |
+| LC 662   | Maximum Width of Binary Tree      | BFS + Level Indexing                    |
+| LC 114   | Flatten Binary Tree to Linked List| Preorder + In-place Transformation      |
+| LC 98    | Validate Binary Search Tree       | BST + Range Validation                  |
+| LC 108   | Convert Sorted Array to BST       | BST + Divide and Conquer                |
 
 ---
 
@@ -124,12 +127,40 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 ## 11. BFS + Level Indexing
 - LC 662 – Maximum Width of Binary Tree
 
+## 12. Reverse Preorder + In-place Transformation
+- LC 114 – Flatten Binary Tree to Linked List
+
+**Learning**
+- Use reverse preorder traversal: `Right → Left → Root`.
+- Maintain a pointer to the previously processed node.
+- Connect the current node to the previously processed node.
+- Set the left pointer to `NULL`.
+- Transform the tree in-place without using an additional data structure.
+
 **Learning**
 - Use level-order traversal with a queue.
 - Assign an index to each node as if the tree were a complete binary tree.
 - For each level, calculate width using the first and last node indices.
 - Use normalized level indices to avoid unnecessary growth of values.
 
+## 13. BST + Range Validation
+- LC 98 – Validate Binary Search Tree
+
+**Learning**
+- Every node must satisfy the constraints imposed by its ancestors.
+- Maintain a valid range for each node.
+- Left subtree values must remain smaller than the current node.
+- Right subtree values must remain greater than the current node.
+
+---
+
+## 14. BST + Divide and Conquer
+- LC 108 – Convert Sorted Array to Binary Search Tree
+
+**Learning**
+- Select the middle element as the root.
+- Recursively construct the left and right subtrees.
+- Splitting the sorted array around the middle produces a balanced BST.
 ---
 
 # Complexity Summary
@@ -149,6 +180,9 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | LC 236  | O(n)            | O(h)             |
 | LC 257  | O(n²)           | O(h)             |
 | LC 662  | O(n)            | O(n)             |
+| LC 114  | O(n)            | O(h)             |
+| LC 98   | O(n)            | O(h)             |
+| LC 108  | O(n)            | O(log n)         |
 
 Where:
 - `n` = number of nodes in the main tree
