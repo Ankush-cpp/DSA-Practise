@@ -25,6 +25,7 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | LC 114   | Flatten Binary Tree to Linked List| Preorder + In-place Transformation      |
 | LC 98    | Validate Binary Search Tree       | BST + Range Validation                  |
 | LC 108   | Convert Sorted Array to BST       | BST + Divide and Conquer                |
+| LC 783   | Minimum Distance Between BST Nodes| BST + Inorder Traversal                 |
 
 ---
 
@@ -162,6 +163,14 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 - Recursively construct the left and right subtrees.
 - Splitting the sorted array around the middle produces a balanced BST.
 ---
+## 15. BST + Inorder Traversal
+- LC 783 – Minimum Distance Between BST Nodes
+
+**Learning**
+- Inorder traversal of a BST produces values in sorted order.
+- Compare each node with the previously visited node.
+- The minimum difference is found among consecutive inorder values.
+- This allows the answer to be calculated in a single traversal.
 
 # Complexity Summary
 
@@ -183,6 +192,7 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | LC 114  | O(n)            | O(h)             |
 | LC 98   | O(n)            | O(h)             |
 | LC 108  | O(n)            | O(log n)         |
+| LC 783  | O(n)            | O(h)             |
 
 Where:
 - `n` = number of nodes in the main tree
