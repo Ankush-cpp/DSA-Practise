@@ -26,6 +26,7 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | LC 98    | Validate Binary Search Tree       | BST + Range Validation                  |
 | LC 108   | Convert Sorted Array to BST       | BST + Divide and Conquer                |
 | LC 783   | Minimum Distance Between BST Nodes| BST + Inorder Traversal                 |
+| LC 230   | Kth Smallest Element in a BST     | BST + Inorder Traversal                 |
 
 ---
 
@@ -172,6 +173,14 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 - The minimum difference is found among consecutive inorder values.
 - This allows the answer to be calculated in a single traversal.
 
+## 16. BST + Inorder Traversal
+- LC 230 – Kth Smallest Element in a BST
+
+**Learning**
+- Inorder traversal of a BST produces values in ascending order.
+- Keep track of the number of visited nodes.
+- The node visited at position `k` is the kth smallest element.
+- The traversal can stop once the kth element is found.
 # Complexity Summary
 
 | Problem | Time Complexity | Space Complexity |
@@ -193,6 +202,7 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | LC 98   | O(n)            | O(h)             |
 | LC 108  | O(n)            | O(log n)         |
 | LC 783  | O(n)            | O(h)             |
+| LC 230  | O(h + k)        | O(h)             |
 
 Where:
 - `n` = number of nodes in the main tree
