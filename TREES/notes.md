@@ -18,15 +18,15 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | 112      | Path Sum                          | DFS + Recursion                         |
 | 105      | Construct Binary Tree from........| Recursion + Hash Map                    |
 |..........| preorder and Inorder Traversal....|                                         |
-| 236      | Lowest Common Ancestor of a Binary| DFS + Recursion                         |
-|..........| tree..............................|.........................................|
-| LC 257   | Binary Tree Paths                 | DFS + Backtracking                      |
-| LC 662   | Maximum Width of Binary Tree      | BFS + Level Indexing                    |
-| LC 114   | Flatten Binary Tree to Linked List| Preorder + In-place Transformation      |
-| LC 98    | Validate Binary Search Tree       | BST + Range Validation                  |
-| LC 108   | Convert Sorted Array to BST       | BST + Divide and Conquer                |
-| LC 783   | Minimum Distance Between BST Nodes| BST + Inorder Traversal                 |
-| LC 230   | Kth Smallest Element in a BST     | BST + Inorder Traversal                 |
+| 236      | Lowest Common Ancestor of a Binary tree | DFS + Recursion                   |
+| 257      | Binary Tree Paths                 | DFS + Backtracking                      |
+| 662      | Maximum Width of Binary Tree      | BFS + Level Indexing                    |
+| 114      | Flatten Binary Tree to Linked List| Preorder + In-place Transformation      |
+| 98       | Validate Binary Search Tree       | BST + Range Validation                  |
+| 108      | Convert Sorted Array to BST       | BST + Divide and Conquer                |
+| 783      | Minimum Distance Between BST Nodes| BST + Inorder Traversal                 |
+| 230      | Kth Smallest Element in a BST     | BST + Inorder Traversal                 |
+| 235      | Lowest Common Ancestor of a Binary Search Tree | BST Property + Iteration   |
 
 ---
 
@@ -181,6 +181,17 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 - Keep track of the number of visited nodes.
 - The node visited at position `k` is the kth smallest element.
 - The traversal can stop once the kth element is found.
+
+## 17. BST Property + Iteration
+- LC 235 – Lowest Common Ancestor of a Binary Search Tree
+
+**Learning**
+- Use the ordering property of a BST to decide the direction of traversal.
+- If both nodes are smaller than the current node, move left.
+- If both nodes are greater than the current node, move right.
+- Otherwise, the current node is the Lowest Common Ancestor.
+- The BST property allows the search without traversing the entire tree.
+
 # Complexity Summary
 
 | Problem | Time Complexity | Space Complexity |
@@ -203,6 +214,7 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | LC 108  | O(n)            | O(log n)         |
 | LC 783  | O(n)            | O(h)             |
 | LC 230  | O(h + k)        | O(h)             |
+| LC 235  | O(h)            | O(1)             |
 
 Where:
 - `n` = number of nodes in the main tree
