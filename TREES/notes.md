@@ -27,6 +27,8 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | 783      | Minimum Distance Between BST Nodes| BST + Inorder Traversal                 |
 | 230      | Kth Smallest Element in a BST     | BST + Inorder Traversal                 |
 | 235      | Lowest Common Ancestor of a Binary Search Tree | BST Property + Iteration   |
+| 1008     | Construct Binary Search Tree from Preorder Traversal | BST + Recursion      |
+| 99       | Recover Binary Search Tree        | Inorder Traversal + BST Property        |
 
 ---
 
@@ -192,6 +194,24 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 - Otherwise, the current node is the Lowest Common Ancestor.
 - The BST property allows the search without traversing the entire tree.
 
+## 18. BST + Recursion
+- LC 1008 – Construct Binary Search Tree from Preorder Traversal
+
+**Learning**
+- The first element of preorder is the root.
+- Use the BST property to determine whether the next values belong to the left or right subtree.
+- Maintain an upper bound for the current subtree.
+- Construct the tree in a single traversal of the preorder array.
+
+## 19. Inorder Traversal + BST Property
+- LC 99 – Recover Binary Search Tree
+
+**Learning**
+- A valid BST produces sorted values during inorder traversal.
+- Detect inversions where the current value is smaller than the previous value.
+- Identify the two misplaced nodes.
+- Swap their values to restore the BST.
+
 # Complexity Summary
 
 | Problem | Time Complexity | Space Complexity |
@@ -215,6 +235,8 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | LC 783  | O(n)            | O(h)             |
 | LC 230  | O(h + k)        | O(h)             |
 | LC 235  | O(h)            | O(1)             |
+| LC 1008 | O(n)            | O(h)             |
+| LC 99   | O(n)            | O(h)             |
 
 Where:
 - `n` = number of nodes in the main tree
