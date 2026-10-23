@@ -29,6 +29,9 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | 235      | Lowest Common Ancestor of a Binary Search Tree | BST Property + Iteration   |
 | 1008     | Construct Binary Search Tree from Preorder Traversal | BST + Recursion      |
 | 99       | Recover Binary Search Tree        | Inorder Traversal + BST Property        |
+| 173      | Binary Search Tree Iterator       | BST + Stack + Inorder                   |
+| 116      | Populating Next Right Pointers in Each Node | Binary Tree+Level Connections |
+| 404      | Sum of Left Leaves                | Binary Tree + Recursion (DFS)           |
 
 ---
 
@@ -212,6 +215,41 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 - Identify the two misplaced nodes.
 - Swap their values to restore the BST.
 
+## 20 BST Iterator
+- LC 173 – Binary Search Tree Iterator
+
+**Learning**
+- Use a stack to simulate inorder traversal iteratively.
+- Push the leftmost path of the tree onto the stack.
+- `next()` returns the next smallest element in the BST.
+- After processing a node, explore the leftmost path of its right subtree.
+- Use `hasNext()` to check whether unprocessed nodes remain.
+- Maintain traversal state without storing the entire inorder sequence.
+
+---
+
+## 21 Level Connections
+- LC 116 – Populating Next Right Pointers in Each Node
+
+**Learning**
+- Connect nodes at the same level using their `next` pointers.
+- Connect each left child to its right sibling.
+- Connect each right child to the left child of the next node at the same level.
+- Use existing `next` connections to traverse each level horizontally.
+- Process levels using the leftmost node as the starting point.
+- Avoid using a queue or any additional data structure.
+
+## 22 Binary Tree + Recursion (DFS)
+- LC 404 – Sum of Left Leaves
+
+**Learning**
+- Use recursion to traverse the binary tree.
+- A left leaf is a node that is the left child of its parent and has no children.
+- Check whether the left child is a leaf before adding its value.
+- Recursively process both left and right subtrees.
+- Return the sum of all left leaf nodes.
+- Handle an empty tree by returning `0`.
+
 # Complexity Summary
 
 | Problem | Time Complexity | Space Complexity |
@@ -237,6 +275,9 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | LC 235  | O(h)            | O(1)             |
 | LC 1008 | O(n)            | O(h)             |
 | LC 99   | O(n)            | O(h)             |
+| LC 173  | O(1) amortized per next() | O(h)   |
+| LC 116  | O(n)            | O(1) auxiliary   |
+| LC 404  | O(n)            | O(h)             |
 
 Where:
 - `n` = number of nodes in the main tree
