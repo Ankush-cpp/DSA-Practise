@@ -32,6 +32,8 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | 173      | Binary Search Tree Iterator       | BST + Stack + Inorder                   |
 | 116      | Populating Next Right Pointers in Each Node | Binary Tree+Level Connections |
 | 404      | Sum of Left Leaves                | Binary Tree + Recursion (DFS)           |
+| 1302 | Deepest Leaves Sum | BFS + Level Order Traversal |
+| 2415 | Reverse Odd Levels of Binary Tree | BFS + Level Order Traversal |
 
 ---
 
@@ -250,6 +252,32 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 - Return the sum of all left leaf nodes.
 - Handle an empty tree by returning `0`.
 
+## BFS + Level Order Traversal
+
+* LC 1302 – Deepest Leaves Sum
+
+**Learning**
+
+* Use a queue to traverse the binary tree level by level.
+* Process all nodes at the current level using the queue's size.
+* Reset the sum to `0` at the beginning of each level.
+* Add each node's value to the current level's sum.
+* Push the left and right children into the queue if they exist.
+* After BFS finishes, the sum contains only the deepest level's node values.
+
+## BFS + Level Order Traversal
+
+* LC 2415 – Reverse Odd Levels of Binary Tree
+
+**Learning**
+
+* Use a queue to traverse the binary tree level by level.
+* Store the nodes of each level in a vector.
+* Track the level index, starting from level `0`.
+* Reverse node values at odd-numbered levels using two pointers.
+* Swap node values instead of changing the tree's structure.
+* Return the original root after processing all levels.
+
 # Complexity Summary
 
 | Problem | Time Complexity | Space Complexity |
@@ -278,6 +306,8 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | LC 173  | O(1) amortized per next() | O(h)   |
 | LC 116  | O(n)            | O(1) auxiliary   |
 | LC 404  | O(n)            | O(h)             |
+| LC 1302 | O(n)            | O(w)             |
+| LC 2415 | O(n)            | O(n)             |
 
 Where:
 - `n` = number of nodes in the main tree
