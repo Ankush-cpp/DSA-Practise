@@ -34,6 +34,7 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | 404      | Sum of Left Leaves                | Binary Tree + Recursion (DFS)           |
 | 1302 | Deepest Leaves Sum | BFS + Level Order Traversal |
 | 2415 | Reverse Odd Levels of Binary Tree | BFS + Level Order Traversal |
+| 4015 | Weighted Sum of a Tree | BFS + Tree Depth Calculation |
 
 ---
 
@@ -278,6 +279,18 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 * Swap node values instead of changing the tree's structure.
 * Return the original root after processing all levels.
 
+## BFS + Tree Depth Calculation
+
+* LC 4015 – Weighted Sum of a Tree
+
+**Learning**
+* Constructed an adjacency list using the parent array.
+* Used BFS to traverse the tree level by level.
+* Initialized root depth as 1.
+* Calculated child depth using depth[child] = depth[node] + 1.
+* Maintained maximum depth to calculate tree height.
+* Calculated each node's contribution using nums[i] * (h - depth[i] + 1).
+
 # Complexity Summary
 
 | Problem | Time Complexity | Space Complexity |
@@ -308,6 +321,7 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | LC 404  | O(n)            | O(h)             |
 | LC 1302 | O(n)            | O(w)             |
 | LC 2415 | O(n)            | O(n)             |
+| LC 4015 | O(n)            | O(n)             |
 
 Where:
 - `n` = number of nodes in the main tree
