@@ -35,6 +35,7 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | 1302 | Deepest Leaves Sum | BFS + Level Order Traversal |
 | 2415 | Reverse Odd Levels of Binary Tree | BFS + Level Order Traversal |
 | 4015 | Weighted Sum of a Tree | BFS + Tree Depth Calculation |
+| 538 | Convert BST to Greater Tree | DFS + Reverse Inorder Traversal |
 
 ---
 
@@ -291,6 +292,17 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 * Maintained maximum depth to calculate tree height.
 * Calculated each node's contribution using nums[i] * (h - depth[i] + 1).
 
+## DFS + Reverse Inorder Traversal
+
+* LC 538 – Convert BST to Greater Tree
+
+**Learning**
+Used Reverse Inorder Traversal: Right → Root → Left.
+Maintained a running sum variable.
+Added the current node's original value to sum.
+Updated the current node's value with the running sum.
+Since BST's larger values are visited first, every node gets the sum of its value and all greater values.
+
 # Complexity Summary
 
 | Problem | Time Complexity | Space Complexity |
@@ -322,6 +334,7 @@ A collection of classic **Binary Tree** problems solved during my DSA revision.
 | LC 1302 | O(n)            | O(w)             |
 | LC 2415 | O(n)            | O(n)             |
 | LC 4015 | O(n)            | O(n)             |
+| LC 538  | O(n)            | O(h)             |
 
 Where:
 - `n` = number of nodes in the main tree
